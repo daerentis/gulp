@@ -1,0 +1,15 @@
+{
+  "name": "jnf",
+  "version": "1.0.0",
+  "description": "Jewish National Fonds",
+  "author": "Fresh Lime - www.freshlime.de",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gulp": "^4.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.11.0"
+  }
+}
