@@ -1,0 +1,11 @@
+#footer {   
+	background: url('../assets/blue-circles.png') top center;	
+	color: $white;
+	padding-top: 40px;
+	font-size: $font-size-sm;
+	clear: both;
+	
+	h4 { font-family: $font-family-sans-serif; }
+	a { color: $white; }
+	.btn:hover { color: $primary; }
+}
