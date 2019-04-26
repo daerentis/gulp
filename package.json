@@ -1,7 +1,7 @@
 {
-  "name": "jnf",
+  "name": "app",
   "version": "1.0.0",
-  "description": "Jewish National Fonds",
+  "description": "App description",
   "author": "Fresh Lime - www.freshlime.de",
   "dependencies": {
   },
