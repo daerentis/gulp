@@ -4,6 +4,7 @@
   "description": "App description",
   "author": "Fresh Lime - www.freshlime.de",
   "dependencies": {
+    "bootstrap": "^4.3.1"
   },
   "devDependencies": {
     "gulp": "^4.0.1",
