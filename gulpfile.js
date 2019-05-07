@@ -23,7 +23,10 @@ function css() {
     .pipe(dest('dist/'));
 };
 
-watch('src/scss/**/*.scss', css);
-watch('src/js/*.js', js);
+function watching() {
+  watch('src/scss/**/*.scss', css);
+  watch('src/js/*.js', js);
+}
 
+exports.watch = watching;
 exports.default = series(js, css);
