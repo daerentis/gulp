@@ -1,4 +1,4 @@
-const { src, dest, series, watch } = require('gulp');
+const { src, dest, parallel, watch } = require('gulp');
 const sass = require('gulp-sass');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
@@ -29,4 +29,4 @@ function watching() {
 }
 
 exports.watch = watching;
-exports.default = series(js, css);
+exports.default = parallel(js, css);
