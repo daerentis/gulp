@@ -5,7 +5,7 @@ const concat = require('gulp-concat');
 function vendors() {
   return src([
       'node_modules/...'
-    ])
+    ], { sourcemap: false })
     .pipe(concat('vendors.js'))
     .pipe(dest('dist/'));
 };
