@@ -1,15 +1,20 @@
-const { src, dest, parallel, watch } = require('gulp');
+const { src, dest, series, watch } = require('gulp');
 const sass = require('gulp-sass');
-const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+
+function vendors() {
+  return src([
+      'node_modules/...'
+    ])
+    .pipe(concat('vendors.js'))
+    .pipe(dest('dist/'));
+};
 
 function js() {
   return src([
-      'node_modules/...',
       'src/js/app.js'
     ])
-    .pipe(concat('bundle.min.js'))
-    .pipe(uglify())
+    .pipe(concat('bundle.js'))
     .pipe(dest('dist/'));
 };
 
@@ -18,7 +23,7 @@ function css() {
       'node_modules/...',
       'src/scss/main.scss'
     ])
-    .pipe(concat('bundle.min.css'))
+    .pipe(concat('bundle.css'))
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(dest('dist/'));
 };
@@ -29,4 +34,4 @@ function watching() {
 }
 
 exports.watch = watching;
-exports.default = parallel(js, css);
+exports.default = series(vendors, js, css);
